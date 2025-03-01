@@ -14,6 +14,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh '''
+                    id
+                    ls -al
+                '''
+                
                 retry(3) {
                     sh './flakey-deploy.sh'
                 }
