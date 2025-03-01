@@ -17,6 +17,8 @@ pipeline {
                 sh '''
                     id
                     ls -al
+                    chmod u+x ./flakey-deploy.sh ./health-check.sh
+                    ls -al
                 '''
                 
                 retry(3) {
