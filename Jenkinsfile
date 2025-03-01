@@ -3,8 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                //sh 'mvn --version'
-                sh 'uname -a'
+                // sh 'mvn --version'
+                // sh 'uname -a'
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
